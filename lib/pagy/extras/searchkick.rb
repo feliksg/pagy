@@ -6,7 +6,7 @@ class Pagy
     # Return Pagy object and items
     def pagy_searchkick(results, vars={})
       pagy = Pagy.new(pagy_searchkick_get_vars(results, vars))
-      return pagy, results
+      return pagy, array[pagy.offset, pagy.items]
     end
 
     def pagy_searchkick_get_vars(results, vars)
